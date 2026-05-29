@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: meituan-cloud-fridge-backend
+Version: 0.1.0
+Summary: FastAPI backend for Meituan Cloud Fridge hackathon demo
+Requires-Python: >=3.11
+Requires-Dist: fastapi<1.0.0,>=0.116.0
+Requires-Dist: uvicorn[standard]<1.0.0,>=0.35.0
+Requires-Dist: sqlalchemy<3.0.0,>=2.0.41
+Requires-Dist: psycopg[binary]<4.0.0,>=3.2.9
+Requires-Dist: pydantic-settings<3.0.0,>=2.10.0
+Requires-Dist: passlib<2.0.0,>=1.7.4
+Requires-Dist: PyJWT<3.0.0,>=2.10.1
+Requires-Dist: python-multipart<1.0.0,>=0.0.20
+Provides-Extra: dev
+Requires-Dist: pytest<9.0.0,>=8.4.0; extra == "dev"
+Requires-Dist: httpx<1.0.0,>=0.28.1; extra == "dev"
+Dynamic: requires-python

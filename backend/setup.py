@@ -1,0 +1,25 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="meituan-cloud-fridge-backend",
+    version="0.1.0",
+    description="FastAPI backend for Meituan Cloud Fridge hackathon demo",
+    packages=find_packages(),
+    python_requires=">=3.11",
+    install_requires=[
+        "fastapi>=0.116.0,<1.0.0",
+        "uvicorn[standard]>=0.35.0,<1.0.0",
+        "sqlalchemy>=2.0.41,<3.0.0",
+        "psycopg[binary]>=3.2.9,<4.0.0",
+        "pydantic-settings>=2.10.0,<3.0.0",
+        "passlib>=1.7.4,<2.0.0",
+        "PyJWT>=2.10.1,<3.0.0",
+        "python-multipart>=0.0.20,<1.0.0",
+    ],
+    extras_require={
+        "dev": [
+            "pytest>=8.4.0,<9.0.0",
+            "httpx>=0.28.1,<1.0.0",
+        ]
+    },
+)

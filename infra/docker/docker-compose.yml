@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: meituan-cloud-fridge-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: meituan_cloud_fridge
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../sql/bootstrap.sql:/docker-entrypoint-initdb.d/bootstrap.sql
+
+volumes:
+  postgres_data:
